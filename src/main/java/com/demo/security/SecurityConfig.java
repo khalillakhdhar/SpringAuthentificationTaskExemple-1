@@ -16,7 +16,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	{
 		// méthode de connexion (authentification
 		auth.inMemoryAuthentication().withUser("admin").password("{noop}1234").roles("USER","ADMIN");
-		auth.inMemoryAuthentication(). withUser("user").password("{noop}1234").roles(" USER");
+		auth.inMemoryAuthentication(). withUser("user").password("{noop}1234").roles("USER");
 		
 	}
 	@Override
