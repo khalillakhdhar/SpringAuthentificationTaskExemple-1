@@ -1,5 +1,7 @@
 package com.demo.service;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,5 +64,9 @@ public class AccountServiceImplement implements AccountService {
 		// TODO Auto-generated method stub
 		return userRepository.findByUsername(username);
 	}
-
+	@Override
+	public List<AppUser> getAllUsers() {
+		// TODO Auto-generated method stub
+		return userRepository.findAll();
+	}
 }

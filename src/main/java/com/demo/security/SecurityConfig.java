@@ -48,6 +48,9 @@ private DataSource dataSource;
 		http.csrf().disable();
 		http.authorizeRequests().antMatchers("/login/**","register/**").permitAll();
 		http.authorizeRequests().antMatchers(HttpMethod.POST,"/tasks/**").hasRole("ADMIN");
+		http.authorizeRequests().antMatchers(HttpMethod.GET,"/tasks/**").permitAll();
+		http.authorizeRequests().antMatchers("/api/users/**").permitAll();
+
 		http.authorizeRequests().anyRequest().authenticated();
 	}
 	
